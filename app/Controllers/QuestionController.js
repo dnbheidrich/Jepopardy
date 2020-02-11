@@ -3,12 +3,9 @@ import _store from "../store.js";
 
 //Private
 function _draw() {
-  let questions = _store.State.questions;
+  let questions = _store.State.questions
   let template = "";
-  questions.forEach(question => {
-    template += question.Template
-    console.log(questions);
-  })
+ template += questions
  document.getElementById("questions").innerHTML = template;
 }
 
