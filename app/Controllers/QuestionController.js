@@ -2,11 +2,12 @@ import QuestionService from "../Services/QuestionService.js"
 import _store from "../store.js";
 
 //Private
+// dot notation wont work here but bracket does
 function _draw() {
-  let questions = _store.State.questions
-  let template = "";
- template += questions
- document.getElementById("questions").innerHTML = template;
+  let questions = _store.State.questions['Template']
+  // let template = "";
+//  template += questions
+ document.getElementById("questions").innerHTML = questions;
 }
 
 //Public

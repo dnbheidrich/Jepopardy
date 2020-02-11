@@ -3,7 +3,7 @@ import Question from "../Models/Question.js"
 
 const _api = axios.create({
   baseURL: "http://jservice.io/api/random",
-  timeout: 13000
+  timeout: 3000
 });
 
 class QuestionService {
@@ -11,9 +11,9 @@ class QuestionService {
 
   }
   getApiQuestion(){
-    _api.get("").then(response =>{
+    _api.get("").then(res =>{
 
-      let question = new Question(response.data[0]);
+      let question = new Question(res.data[0]);
       
       _store.commit("questions", question)
       console.log(question);
