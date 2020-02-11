@@ -17,12 +17,16 @@ class QuestionService {
       let question = new Question(response.data[0]);
       
       _store.commit("questions", question)
+      console.log(question);
+      
     })
     .catch(error => {
       console.error(error);
     })
   }
 }
+
+
 
 const SERVICE = new QuestionService();
 export default SERVICE;

@@ -6,6 +6,9 @@ this.id = data.id
 this.value = data.value     
    }
    get Template() {
-    return `<li>${this.question}</li>`;
+    return `<li>${this.question}</li>
+    <li>${this.answer}</li>
+    <li>${this.id}</li>
+    <li>${this.value}</li>`;
   }
  }

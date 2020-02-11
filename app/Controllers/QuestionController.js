@@ -7,6 +7,7 @@ function _draw() {
   let template = "";
   questions.forEach(question => {
     template += question.Template
+    console.log(questions);
   })
  
   
@@ -23,6 +24,8 @@ export default class QuestionController {
     
 
     QuestionService.getApiQuestion();
+    
+    
     
   }
 }
