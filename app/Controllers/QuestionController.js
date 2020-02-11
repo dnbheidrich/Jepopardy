@@ -9,9 +9,7 @@ function _draw() {
     template += question.Template
     console.log(questions);
   })
- 
-  
-  document.getElementById("questions").innerHTML = template;
+ document.getElementById("questions").innerHTML = template;
 }
 
 //Public
@@ -21,11 +19,6 @@ export default class QuestionController {
   }
 
   getApiQuestion() {
-    
-
     QuestionService.getApiQuestion();
-    
-    
-    
   }
 }

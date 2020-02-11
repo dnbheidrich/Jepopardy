@@ -11,8 +11,7 @@ class QuestionService {
 
   }
   getApiQuestion(){
-    _api.get("")
-    .then(response =>{
+    _api.get("").then(response =>{
 
       let question = new Question(response.data[0]);
       
